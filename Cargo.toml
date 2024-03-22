@@ -1,0 +1,11 @@
+[package]
+name = "bevy_mic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Bevy
+bevy_audio = "0.13.1"
+
+# Microphone interface
+cpal = "0.15.3"
