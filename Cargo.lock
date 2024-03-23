@@ -335,6 +335,7 @@ dependencies = [
 name = "bevy_audio_stream"
 version = "0.1.0"
 dependencies = [
+ "bevy_app",
  "bevy_asset",
  "bevy_audio",
  "bevy_reflect",
