@@ -6,6 +6,12 @@ use crossbeam_queue::ArrayQueue;
 use std::sync::Arc;
 
 /// A lossy audio stream.
+///
+/// You can create a new stream with [`AudioStreamSource::new`], and send samples to it using [`AudioStreamSource::sender`].
+///
+/// This type is parallel to [`AudioSource`](bevy_audio::AudioSource), in the sense that you can use it in an [`AudioSourceBundle`](crate::AudioStreamBundle) to play audio.
+///
+/// This stream is lossy. If it runs out of capacity for new [`StreamChunk`]s, it will discard them.
 #[derive(Asset, TypePath)]
 pub struct AudioStreamSource {
     stream: Arc<ArrayQueue<StreamChunk>>,
@@ -15,6 +21,7 @@ pub struct AudioStreamSource {
 }
 
 impl AudioStreamSource {
+    /// Creates a new [`AudioStreamSource`].
     pub fn new(capacity: usize, channels: u16, sample_rate: u32) -> Self {
         Self {
             stream: Arc::new(ArrayQueue::new(capacity)),
@@ -23,6 +30,7 @@ impl AudioStreamSource {
         }
     }
 
+    /// Returns an [`AudioStreamSender`] which will send data through this stream.
     pub fn sender(&self) -> AudioStreamSender {
         AudioStreamSender::new(Arc::clone(&self.stream))
     }

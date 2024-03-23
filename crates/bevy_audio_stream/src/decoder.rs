@@ -3,10 +3,16 @@ use bevy_audio::Source;
 use crossbeam_queue::ArrayQueue;
 use std::sync::Arc;
 
+/// A [`Source`] decoder that receives samples from [`AudioStreamSender`](crate::AudioStreamSender).
+///
+/// This type should never be created manually. You are likely looking for [`AudioStreamSource`](crate::AudioStreamSource) instead.
 pub struct AudioStreamDecoder {
+    /// Stream for popping new sample chunks.
     stream: Arc<ArrayQueue<StreamChunk>>,
 
+    /// The chunk currently being iterated.
     chunk: Box<StreamChunk>,
+    /// Iterator index.
     i: usize,
 
     channels: u16,
@@ -14,6 +20,7 @@ pub struct AudioStreamDecoder {
 }
 
 impl AudioStreamDecoder {
+    /// Creates a new [`AudioStreamDecoder`] from a stream.
     pub(crate) fn new(
         stream: Arc<ArrayQueue<StreamChunk>>,
         channels: u16,
