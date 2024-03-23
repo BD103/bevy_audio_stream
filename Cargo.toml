@@ -5,7 +5,12 @@ edition = "2021"
 
 [dependencies]
 # Bevy
-bevy_audio = "0.13.1"
+bevy_app = "0.13.0"
+bevy_audio = "0.13.0"
+bevy_ecs = "0.13.0"
 
 # Microphone interface
 cpal = "0.15.3"
+
+[dev-dependencies]
+bevy = "0.13.0"
