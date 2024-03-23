@@ -6,6 +6,8 @@ members = [
 
 [workspace.dependencies]
 # Bevy
+bevy = "0.13.0"
+
 bevy_app = "0.13.0"
 bevy_asset = "0.13.0"
 bevy_audio = "0.13.0"

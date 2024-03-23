@@ -11,3 +11,6 @@ bevy_audio.workspace = true
 bevy_reflect.workspace = true
 
 crossbeam-queue = "0.3.11"
+
+[dev-dependencies]
+bevy.workspace = true
