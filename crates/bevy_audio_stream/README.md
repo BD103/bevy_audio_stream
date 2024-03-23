@@ -1,5 +1,7 @@
 # `bevy_audio_stream`
 
+[![crates.io](https://img.shields.io/crates/v/bevy_audio_stream)](https://crates.io/crates/bevy_audio_stream) [![docs.rs](https://docs.rs/bevy_audio_stream/badge.svg)](https://docs.rs/bevy_audio_stream)
+
 This crate provides an alternative to the [Bevy] game engine's [`AudioSource`] type that enables asynchronously streaming audio programmatically. It is designed specifically for use in voice chat systems, but it can be applied elsewhere too.
 
 [Bevy]: https://bevyengine.org/
@@ -10,6 +12,12 @@ This crate provides an alternative to the [Bevy] game engine's [`AudioSource`] t
 `bevy_audio_stream` is currently unstable and likely to contain breaking changes across minor releases until it stabilizes in version 1.0.0. Additionally, it was written by someone relatively inexperienced with audio. As such, it may not support your use-case or may contain bugs. If so, please [raise an issue] on Github and consider contributing! All help is appreciated. :)
 
 [raise an issue]: https://github.com/BD103/bevy_mic
+
+## Bevy Compatibility
+
+|Bevy|`bevy_audio_stream`|
+|-|-|
+|0.13|0.1|
 
 ## License
 
