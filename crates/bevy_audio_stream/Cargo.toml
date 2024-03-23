@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+# Bevy
+bevy_audio.workspace = true
+bevy_asset.workspace = true
+bevy_reflect.workspace = true
+
+crossbeam-queue = "0.3.11"
