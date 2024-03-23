@@ -3,9 +3,9 @@ use bevy_app::{App, Plugin};
 use bevy_audio::AddAudioSource;
 
 /// A plugin that enables the use of [`AudioStreamSource`].
-/// 
+///
 /// # Example
-/// 
+///
 /// ```no_run
 /// # use bevy::prelude::*;
 /// # use bevy_audio_stream::AudioStreamPlugin;

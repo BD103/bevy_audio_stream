@@ -42,8 +42,6 @@ impl Iterator for AudioStreamDecoder {
     type Item = f32;
 
     fn next(&mut self) -> Option<Self::Item> {
-        self.i += 1;
-
         // If the entire chunk has been yielded...
         if self.i >= self.chunk.len() {
             if let Some(chunk) = self.stream.pop() {
@@ -56,7 +54,11 @@ impl Iterator for AudioStreamDecoder {
             }
         }
 
-        Some(self.chunk[self.i])
+        let res = self.chunk[self.i];
+
+        self.i += 1;
+
+        Some(res)
     }
 }
 
