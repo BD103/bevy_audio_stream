@@ -4,12 +4,25 @@ members = [
     "crates/*",
 ]
 
+[workspace.package]
+authors = ["BD103"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+# Based on Bevy's requirements.
+rust-version = "1.76.0"
+repository = "https://github.com/BD103/bevy_mic"
+categories = ["game-development", "multimedia::audio"]
+keywords = ["bevy", "audio"]
+
 [workspace.dependencies]
 # Bevy
-bevy = "0.13.0"
-
 bevy_app = "0.13.0"
 bevy_asset = "0.13.0"
 bevy_audio = "0.13.0"
 bevy_ecs = "0.13.0"
 bevy_reflect = "0.13.0"
+
+# Bevy, but for dev-dependency purposes only!
+bevy = "0.13.0"
+
+[workspace.lints]
