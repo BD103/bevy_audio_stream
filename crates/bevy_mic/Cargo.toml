@@ -10,4 +10,4 @@ bevy_audio.workspace = true
 bevy_ecs.workspace = true
 
 # Microphone interface
-cpal.workspace = true
+cpal = "0.15.3"

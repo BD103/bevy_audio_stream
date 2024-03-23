@@ -9,6 +9,3 @@ members = [
 bevy_app = "0.13.0"
 bevy_audio = "0.13.0"
 bevy_ecs = "0.13.0"
-
-# Other
-cpal = "0.15.3"
