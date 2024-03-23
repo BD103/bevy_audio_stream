@@ -1,16 +1,14 @@
-[package]
-name = "bevy_mic"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+resolver = "2"
+members = [
+    "crates/*",
+]
 
-[dependencies]
+[workspace.dependencies]
 # Bevy
 bevy_app = "0.13.0"
 bevy_audio = "0.13.0"
 bevy_ecs = "0.13.0"
 
-# Microphone interface
+# Other
 cpal = "0.15.3"
-
-[dev-dependencies]
-bevy = "0.13.0"

@@ -1,4 +1,4 @@
-use super::MicConfig;
+use crate::MicConfig;
 use bevy_app::prelude::*;
 
 /// Plugin for recording audio from the microphone.
