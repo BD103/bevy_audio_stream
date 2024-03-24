@@ -6,7 +6,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 rust-version = "1.76.0" # Based on Bevy's requirements.
 description = "Programmatically stream audio in Bevy"
-repository = "https://github.com/BD103/bevy_mic"
+repository = "https://github.com/BD103/bevy_audio_stream"
 categories = ["game-development", "multimedia::audio"]
 keywords = ["bevy", "audio"]
 
