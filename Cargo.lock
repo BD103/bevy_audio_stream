@@ -712,16 +712,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy_mic"
-version = "0.1.0"
-dependencies = [
- "bevy_app",
- "bevy_audio",
- "bevy_ecs",
- "cpal",
-]
-
-[[package]]
 name = "bevy_mikktspace"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
