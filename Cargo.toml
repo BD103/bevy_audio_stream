@@ -1,24 +1,15 @@
 [package]
 name = "bevy_audio_stream"
-version = "0.1.0"
+version = "0.2.0-dev"
 authors = ["BD103"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
-rust-version = "1.76.0" # Based on Bevy's requirements.
-description = "Programmatically stream audio in Bevy"
+rust-version = "1.78.0" # Based on Bevy's requirements.
+description = "Voice chat plugin for Bevy"
 repository = "https://github.com/BD103/bevy_audio_stream"
 categories = ["game-development", "multimedia::audio"]
 keywords = ["bevy", "audio"]
 
 [dependencies]
 # Bevy
-bevy_app = "0.13.0"
-bevy_asset = "0.13.0"
-bevy_audio = "0.13.0"
-bevy_reflect = "0.13.0"
-
-# Stream implementation
-crossbeam-queue = "0.3.11"
-
-[dev-dependencies]
-bevy = "0.13.0"
+bevy = "0.14.0-rc.2"
